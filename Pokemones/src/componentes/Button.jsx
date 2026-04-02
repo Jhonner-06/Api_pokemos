@@ -1,12 +1,13 @@
 import React from 'react'
 import "../sass/Button.scss"
 
-const Button = (props) => {
+const Button = ({icon, handleClick}) => {
   return (
     <div className='Button__Box'>
-        <button className='Button'>
-            {props.text}
+        <button className='Button' onClick={handleClick}>
+            {icon}
         </button>
+        <div className='Button__shadow'></div>
     </div>
 
   )
